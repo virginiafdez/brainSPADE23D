@@ -1,0 +1,114 @@
+         D_modality_class: True                          	[default: False]
+            D_steps_per_G: 1
+              TTUR_factor: 2
+activation_slice_consistency: 100
+         activations_freq: 4000                          	[default: None]
+                batchSize: 3                             	[default: 1]
+             batch_acc_fr: 4                             	[default: 0]
+                    beta1: 0.5                           	[default: 0.0]
+                    beta2: 0.99                          	[default: 0.9]
+      bound_normalization: False
+                cache_dir: None
+      cache_filelist_read: False
+     cache_filelist_write: False
+               cache_type: none
+          checkpoints_dir: /media/vf19/BigCrumb/JOURNAL_22/GENERATIVE_MODELS/ABLATION	[default: checkpoints]
+   contain_dontcare_label: False
+           continue_train: True                          	[default: False]
+                      cut: a
+             dataset_type: sliced                        	[default: volume]
+                 datasets: ['SABRE', 'ADNI', 'BRATS-TCIA']	[default: None]
+                    debug: False
+               diff_slice: True                          	[default: False]
+        diff_style_volume: False
+         disc_acc_lowerth: 0.6                           	[default: 0.65]
+         disc_acc_upperth: 0.75                          	[default: 0.85]
+              disp_D_freq: 2500                          	[default: 600]
+         display_enc_freq: 7000                          	[default: 100]
+             display_freq: 500                           	[default: 100]
+          display_winsize: 400
+          distance_metric: cosim                         	[default: l1]
+               drop_first: False
+                  fix_seq: None
+              format_data: npz
+                  freezeE: False
+                 gan_mode: hinge
+                  gpu_ids: 0
+           gradients_freq: 4000                          	[default: None]
+                image_dir: /media/vf19/BigCrumb/JOURNAL_22/SOURCE_DATASETS/SPADE_SLICED/images_train	[default: None]
+            image_dir_val: /media/vf19/BigCrumb/JOURNAL_22/SOURCE_DATASETS/SPADE_SLICED/images_validation	[default: ]
+                init_type: xavier
+            init_variance: 0.02
+        intensify_lesions: False
+    intensify_lesions_val: False
+      intensity_transform: True                          	[default: False]
+                  isTrain: True                          	[default: None]
+                label_dir: /media/vf19/BigCrumb/JOURNAL_22/SOURCE_DATASETS/SPADE_SLICED/labels_train	[default: None]
+            label_dir_val: /media/vf19/BigCrumb/JOURNAL_22/SOURCE_DATASETS/SPADE_SLICED/labels_validation	[default: ]
+                 label_nc: 12                            	[default: 182]
+              lambda_feat: 0.25                          	[default: 10.0]
+               lambda_kld: 0.0005                        	[default: 0.05]
+             lambda_mddat: 0.3                           	[default: 1.0]
+             lambda_mdmod: 0.75                          	[default: 2.5]
+ lambda_slice_consistency: 1.0                           	[default: 0.0]
+               lambda_vgg: 1.5                           	[default: 10.0]
+       load_from_opt_file: False
+                       lr: 0.0002
+         max_dataset_size: None
+                 mod_disc: False
+             mod_disc_dir: None
+           mod_disc_epoch: 25                            	[default: 10]
+            mod_disc_path: /media/vf19/BigCrumb/JOURNAL_22/GENERATIVE_MODELS/MODISC_22/25_net_MD.pth	[default: None]
+                    model: pix2pix
+                 nThreads: 1                             	[default: 0]
+               n_decoders: dontcare
+               n_layers_D: 3                             	[default: 4]
+                     name: BRAINSPADEV3_25_nomodisc_diffs_selfs	[default: brainspade]
+                      ndf: 64
+                      nef: 16
+                     netD: multiscale
+             netD_subarch: n_layer
+                     netG: spade
+                 new_size: [256, 256]
+                      ngf: 16                            	[default: 64]
+                    niter: 250                           	[default: 50]
+              niter_decay: 50                            	[default: 0]
+                  no_TTUR: False
+          no_ganFeat_loss: False
+                  no_html: False
+              no_vgg_loss: False
+   non_corresponding_dirs: False
+                   norm_D: spectralinstance
+                   norm_E: spectralinstance
+                   norm_G: spectralspadeinstance3x3      	[default: spectralspadesyncbatch3x3]
+                    num_D: 3                             	[default: 2]
+    num_upsampling_layers: normal
+                optimizer: adam
+                output_nc: 1                             	[default: 3]
+                    phase: train
+             pretrained_E: None
+               print_freq: 250                           	[default: 100]
+          print_grad_freq: 50                            	[default: 5000]
+          save_epoch_copy: 50                            	[default: 10]
+          save_epoch_freq: 1                             	[default: 10]
+         save_latest_freq: 5000
+       second_style_slice: True                          	[default: False]
+ self_supervised_training: 1.5                           	[default: 0.0]
+                sequences: ['T1', 'FLAIR', 'T2']         	[default: ['T1', 'FLAIR']]
+           serial_batches: False
+               skullstrip: True                          	[default: False]
+           steps_accuracy: 15                            	[default: 20]
+          style_label_dir: None
+       tboard_activations: False
+         tboard_gradients: False
+                test_freq: 1
+                   tf_log: False
+             topK_discrim: True                          	[default: False]
+           train_enc_only: 20000                         	[default: None]
+             train_modisc: False
+               type_prior: N
+          upsampling_type: upsample
+               use_tboard: True                          	[default: False]
+                  use_vae: True                          	[default: False]
+              which_epoch: latest
+                    z_dim: 16                            	[default: 256]
